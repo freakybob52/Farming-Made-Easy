@@ -38,19 +38,19 @@
 </head>
 <body class="main">
   <nav class="navbar navbar-expand-lg" style="background-color: mediumseagreen;">
-    <a class="navbar-brand" href="http://localhost:5000">Agro Genius</a>
+    <a class="navbar-brand" href="/">Agro Genius</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="http://localhost:5000/explore">Explore Crops</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/trends">Current Trends</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/weather">Weather Forecast</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/fertilizer_info">Fertilizer Recommender</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/shop">Agri Shops</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/croprecomd">Crop Recommender</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/guide">Guide</a>
+        <a class="nav-item nav-link" href="/explore">Explore Crops</a>
+          <a class="nav-item nav-link" href="/trends">Current Trends</a>
+          <a class="nav-item nav-link" href="/weather">Weather Forecast</a>
+          <a class="nav-item nav-link" href="/fertilizer_info">Fertilizer Recommender</a>
+          <a class="nav-item nav-link" href="/shop">Agri Shops</a>
+          <a class="nav-item nav-link" href="/croprecomd">Crop Recommender</a>
+          <a class="nav-item nav-link" href="/guide">Guide</a>
         <div id="google_translate_element"></div>
             <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -143,34 +143,34 @@
               return new Promise(resolve => setTimeout(resolve, ms));
              }
             function updateTime(i){
-              $('#time').load('http://localhost:5000/ticker/'+0+ '/' + i);
+              $('#time').load('/ticker/'+0+ '/' + i);
             }
 
             function updateCrop1(i){
-              $('#crop1').load('http://localhost:5000/ticker/'+ 1 + '/' + i);
+              $('#crop1').load('/ticker/'+ 1 + '/' + i);
             }
 
             function updatePrice1(i){
-              $('#price1').load('http://localhost:5000/ticker/'+ 2 + '/' + i);
+              $('#price1').load('/ticker/'+ 2 + '/' + i);
             }
 
             function updateChange1(i){
               $("#change1").attr("src","../static/gain-icon.png");
-              $('#pos-change').load('http://localhost:5000/ticker/'+ 3 + '/'  + i);
+              $('#pos-change').load('/ticker/'+ 3 + '/'  + i);
 
             }
 
             function updateCrop2(i){
-              $('#crop2').load('http://localhost:5000/ticker/'+ 4 + '/'  + i);
+              $('#crop2').load('/ticker/'+ 4 + '/'  + i);
             }
 
             function updatePrice2(i){
-              $('#price2').load('http://localhost:5000/ticker/'+ 5 + '/'  + i);
+              $('#price2').load('/ticker/'+ 5 + '/'  + i);
             }
 
             function updateChange2(i){
               $("#change2").attr("src","../static/loss-icon.png");
-              $('#neg-change').load('http://localhost:5000/ticker/'+ 6 + '/'  + i);
+              $('#neg-change').load('/ticker/'+ 6 + '/'  + i);
 
             }
           </script>

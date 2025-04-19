@@ -180,19 +180,19 @@ body {
 <body class="main" style="background-image: url('/static/pattern.jpg');">
 
     <nav class="navbar navbar-expand-lg" style="background-color: mediumseagreen;">
-      <a class="navbar-brand" href="http://localhost:5000">Agro Genius</a>
+      <a class="navbar-brand" href="{{ base_url }}">Agro Genius</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="http://localhost:5000/explore">Explore Crops</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/trends">Current Trends</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/weather">Weather Forecast</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/fertilizer_info">Fertilizer Recommender</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/shop">Agri Shops</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/croprecomd">Crop Recommender</a>
-          <a class="nav-item nav-link" href="http://localhost:5000/guide">Guide</a>
+          <a class="nav-item nav-link" href="{{ base_url }}explore">Explore Crops</a>
+          <a class="nav-item nav-link" href="{{ base_url }}trends">Current Trends</a>
+          <a class="nav-item nav-link" href="{{ base_url }}weather">Weather Forecast</a>
+          <a class="nav-item nav-link" href="{{ base_url }}fertilizer_info">Fertilizer Recommender</a>
+          <a class="nav-item nav-link" href="{{ base_url }}shop">Agri Shops</a>
+          <a class="nav-item nav-link" href="{{ base_url }}croprecomd">Crop Recommender</a>
+          <a class="nav-item nav-link" href="{{ base_url }}guide">Guide</a>
             <div id="google_translate_element"></div>
             <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -210,23 +210,23 @@ body {
                 <div class="links">
                     <ul class="links__list" style="--item-total:5">
                       <li class="links__item" style="--item-count:1">
-                        <a class="links__link" href="http://localhost:5000/trends"  style="border: #324F17 3px solid;background-color: azure;">
+                        <a class="links__link" href="{{ base_url }}trends"  style="border: #324F17 3px solid;background-color: azure;">
                           <img src="/static/trends.png" width="70px" alt="">
                           <span class="links__text">Current Trends</span>
                         </a>
                       </li>
                       <li class="links__item" style="--item-count:2">
-                        <a class="links__link" href="http://localhost:5000/weather" style="border: #324F17 3px solid; background-color: azure;">
+                        <a class="links__link" href="{{ base_url }}weather" style="border: #324F17 3px solid; background-color: azure;">
                             <img src="/static/weather.png" width="110px" alt="">
                           <span class="links__text">Weather Forecast</span></a>
                       </li>
                       <li class="links__item" style="--item-count:3">
-                        <a class="links__link" href="http://localhost:5000/explore"  style="border: #324F17 3px solid;background-color: azure;">
+                        <a class="links__link" href="{{ base_url }}explore"  style="border: #324F17 3px solid;background-color: azure;">
                             <img src="/static/crop.png" width="100px" alt="">
                           <span class="links__text">Explore Crops</span></a>
                       </li>
                       <li class="links__item" style="--item-count:4">
-                        <a class="links__link" href="http://localhost:5000/guide"  style="border: #324F17 3px solid;background-color: azure;">
+                        <a class="links__link" href="{{ base_url }}guide"  style="border: #324F17 3px solid;background-color: azure;">
                             <img src="/static/book.png" width="100px" alt="">
                           <span class="links__text">Guide</span></a>
                       </li>
