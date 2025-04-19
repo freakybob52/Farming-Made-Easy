@@ -300,7 +300,7 @@ def predict():
         
     # Apply croprecomend model
     import croprecomend
-    croprecomend.apply()    
+    croprecomend.apply(client,app.config['APPWRITE_BUCKET_ID'])    
     pickle_in = open("model_output.pickle", "rb")
     output = pickle.load(pickle_in)
     avail = str(output[0])
