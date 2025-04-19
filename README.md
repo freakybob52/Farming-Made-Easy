@@ -77,7 +77,7 @@ Create a `.env` file in the root directory and add the necessary environment var
 ```bash
 APPWRITE_ENDPOINT=https://[your-appwrite-instance]
 APPWRITE_PROJECT_ID=[your-appwrite-project-id]
-APPWRITE_API_KEY=[your-appwrite-api-key]
+APPWRITE_BUCKET_ID=""=[your-appwrite-bucket-id]
 ```
 
 ### Step 6: Run the application
