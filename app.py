@@ -164,8 +164,10 @@ except Exception as e:
 @app.route('/')
 def index():
     if 'email' in session:
-        return render_template('index1.html')
+        base_url = request.host_url  # Get the base URL dynamically
+        return render_template('index1.html', base_url=base_url)
     return redirect('/login')
+
 
 @app.route('/trends')
 def trends():
@@ -178,7 +180,9 @@ def trends():
 
 @app.route('/explore')
 def explore():
-    return render_template('explore.html')
+    base_url = request.host_url  # Get the base URL dynamically (localhost or production domain)
+    return render_template('explore.html', base_url=base_url)
+
 
 @app.route('/guide')
 def guide():

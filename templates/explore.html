@@ -108,19 +108,19 @@
 
 <body class="main">
   <nav class="navbar navbar-expand-lg" style="background-color: mediumseagreen;">
-    <a class="navbar-brand" href="http://localhost:5000">Agro Genius</a>
+    <a class="navbar-brand" href="{{ base_url }}">Agro Genius</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="http://localhost:5000/explore">Explore Crops</a>
-        <a class="nav-item nav-link" href="http://localhost:5000/trends">Current Trends</a>
-        <a class="nav-item nav-link" href="http://localhost:5000/weather">Weather Forecast</a>
-        <a class="nav-item nav-link" href="http://localhost:5000/fertilizer_info">Fertilizer Recommender</a>
-        <a class="nav-item nav-link" href="http://localhost:5000/shop">Agri Shops</a>
-        <a class="nav-item nav-link" href="http://localhost:5000/croprecomd">Crop Recommender</a>
-        <a class="nav-item nav-link" href="http://localhost:5000/guide">Guide</a>
+        <a class="nav-item nav-link" href="{{ base_url }}explore">Explore Crops</a>
+        <a class="nav-item nav-link" href="{{ base_url }}trends">Current Trends</a>
+        <a class="nav-item nav-link" href="{{ base_url }}weather">Weather Forecast</a>
+        <a class="nav-item nav-link" href="{{ base_url }}fertilizer_info">Fertilizer Recommender</a>
+        <a class="nav-item nav-link" href="{{ base_url }}shop">Agri Shops</a>
+        <a class="nav-item nav-link" href="{{ base_url }}croprecomd">Crop Recommender</a>
+        <a class="nav-item nav-link" href="{{ base_url }}guide">Guide</a>
         <div id="google_translate_element"></div>
             <script type="text/javascript">
             function googleTranslateElementInit() {
@@ -137,7 +137,7 @@
   <!-- Starts -->
   <div class="row" style="margin-top: 30px; padding-left: 50px;">
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/paddy" style="color: #000000">
+      <a href="{{ base_url }}commodity/paddy" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/rice.jpg" alt="Paddy">
@@ -147,7 +147,7 @@
     </a>
     </div>
      <div class="col s3">
-      <a href="http://localhost:5000/commodity/wheat" style="color: #000000">
+      <a href="{{ base_url }}commodity/wheat" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/wheat.jpg" alt="Wheat">
@@ -156,7 +156,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/barley" style="color: #000000">
+      <a href="{{ base_url }}commodity/barley" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/Barley.jpg" alt="Barley">
@@ -165,7 +165,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/soyabean" style="color: #000000">
+      <a href="{{ base_url }}commodity/soyabean" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/soybean.jpg" alt="Soyabean">
@@ -177,7 +177,7 @@
   </div>
     <div class="row" style="margin-top: 350px; padding-left: 50px;">
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/cotton" style="color: #000000">
+      <a href="{{ base_url }}commodity/cotton" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/cotton.jpg" alt="Cotton">
@@ -187,7 +187,7 @@
     </a>
     </div>
      <div class="col s3">
-      <a href="http://localhost:5000/commodity/copra" style="color: #000000">
+      <a href="{{ base_url }}commodity/copra" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/coconut.png" alt="Cotton">
@@ -196,7 +196,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/groundnut" style="color: #000000">
+      <a href="{{ base_url }}commodity/groundnut" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/groundnut.jpg" alt="Groundnut">
@@ -205,7 +205,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/rape" style="color: #000000">
+      <a href="{{ base_url }}commodity/rape" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/mustradseeds.jpg" alt="Mustard Seeds">
@@ -217,7 +217,7 @@
   </div>
     <div class="row" style="margin-top: 350px; padding-left: 50px;">
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/sesamum" style="color: #000000">
+      <a href="{{ base_url }}commodity/sesamum" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/sesamum.jpg" alt="Sesamum">
@@ -227,7 +227,7 @@
     </a>
     </div>
      <div class="col s3">
-      <a href="http://localhost:5000/commodity/gram" style="color: #000000">
+      <a href="{{ base_url }}commodity/gram" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/gram.jpg" alt="Gram">
@@ -236,7 +236,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/sugarcane" style="color: #000000">
+      <a href="{{ base_url }}commodity/sugarcane" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/sugarcane.jpg" alt="Sugarcane">
@@ -245,7 +245,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/arhar" style="color: #000000">
+      <a href="{{ base_url }}commodity/arhar" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/arhar.jpg" alt="Arhar">
@@ -257,7 +257,7 @@
   </div>
     <div class="row" style="margin-top: 350px; padding-left: 50px;">
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/ragi" style="color: #000000">
+      <a href="{{ base_url }}commodity/ragi" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/ragi.jpg" alt="Ragi">
@@ -267,7 +267,7 @@
     </a>
     </div>
      <div class="col s3">
-      <a href="http://localhost:5000/commodity/maize" style="color: #000000">
+      <a href="{{ base_url }}commodity/maize" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/maize.jpg" alt="Maize">
@@ -276,7 +276,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/moong" style="color: #000000">
+      <a href="{{ base_url }}commodity/moong" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/moong.jpg" alt="Moong">
@@ -286,7 +286,7 @@
     </a>
     </div> 
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/masoor" style="color: #000000">
+      <a href="{{ base_url }}commodity/masoor" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/masoor.jpeg" alt="Massor">
@@ -298,7 +298,7 @@
   </div>
     <div class="row" style="margin-top: 350px; padding-left: 50px;">
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/urad" style="color: #000000">
+      <a href="{{ base_url }}commodity/urad" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/urad.jpg" alt="Urad">
@@ -316,7 +316,7 @@
       </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/niger" style="color: #000000">
+      <a href="{{ base_url }}commodity/niger" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/nigerseed.jpg" alt="Niger Seed">
@@ -325,7 +325,7 @@
         </div>
     </a>
     </div> <div class="col s3">
-      <a href="http://localhost:5000/commodity/safflower" style="color: #000000">
+      <a href="{{ base_url }}commodity/safflower" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/safflower.jpg" alt="Kardi Seed">
@@ -337,7 +337,7 @@
   </div>
     <div class="row" style="margin-top: 350px; padding-left: 50px;">
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/sunflower" style="color: #000000">
+      <a href="{{ base_url }}commodity/sunflower" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/sunflower.jpg" alt="Sunflower">
@@ -347,7 +347,7 @@
     </a>
     </div>
      <div class="col s3">
-      <a href="http://localhost:5000/commodity/jowar" style="color: #000000">
+      <a href="{{ base_url }}commodity/jowar" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/jowar.jpg" alt="Jowar">
@@ -357,7 +357,7 @@
     </a>
     </div> 
     <div class="col s3">
-      <a href="http://localhost:5000/commodity/bajra" style="color: #000000">
+      <a href="{{ base_url }}commodity/bajra" style="color: #000000">
         <div class="image-area">
           <div class="img-wrapper">
             <img src="/static/bajra.jpg" alt="Bajra">
