@@ -142,8 +142,15 @@ class Commodity:
                     break
             return self.Y[ind]
 
+    # def getCropName(self):
+    #     return self.name
+
     def getCropName(self):
-        return self.name
+    # If self.name is an Appwrite ID, look up the corresponding crop name
+        for crop_name, file_id in commodity_dict.items():
+            if self.name == file_id:
+                return crop_name
+        return self.name  # Fallback to the ID if no match is found
 
 
 # Load commodities at startup
@@ -379,7 +386,9 @@ def TopThreeWinners():
     to_send = []
     for j in range(0, min(3, len(sorted_change))):
         perc, i = sorted_change[j]
-        name = str(commodity_list[i]).split('/')[0].capitalize()
+        # name = str(commodity_list[i]).split('/')[0].capitalize()
+        # name = commodity_list[i].getCropName().split('/')[0].capitalize()
+        name = commodity_list[i].getCropName().capitalize()
         name_key = name.capitalize()
         if name_key not in base:
             name_key = next((k for k in base.keys() if k.lower() == name.lower()), name)
@@ -422,7 +431,7 @@ def TopThreeLosers():
     to_send = []
     for j in range(0, min(3, len(sorted_change))):
         perc, i = sorted_change[j]
-        name = str(commodity_list[i]).split('/')[0].capitalize()
+        name = commodity_list[i].getCropName().capitalize()
         name_key = name.capitalize()
         if name_key not in base:
             name_key = next((k for k in base.keys() if k.lower() == name.lower()), name)
@@ -462,17 +471,24 @@ def SixMonthsForecast():
             price = j[1]
             change = j[2]
             if k == 0:
-                month1.append((price, change, str(i).capitalize(), time))
+                # month1.append((price, change, str(i).capitalize(), time))
+                month1.append((price, change, i.getCropName().capitalize(), time))
+                # month1.append((price, change, i.getCropName().split('/')[0].capitalize(), time))
             elif k == 1:
-                month2.append((price, change, str(i).capitalize(), time))
+                month2.append((price, change, i.getCropName().capitalize(), time))
+                # month2.append((price, change, i.getCropName().split('/')[0].capitalize(), time))
             elif k == 2:
-                month3.append((price, change, str(i).capitalize(), time))
+                month3.append((price, change, i.getCropName().capitalize(), time))
+                # month3.append((price, change, i.getCropName().split('/')[0].capitalize(), time))
             elif k == 3:
-                month4.append((price, change, str(i).capitalize(), time))
+                month4.append((price, change, i.getCropName().capitalize(), time))
+                # month4.append((price, change, i.getCropName().split('/')[0].capitalize(), time))
             elif k == 4:
-                month5.append((price, change, str(i).capitalize(), time))
+                month5.append((price, change, i.getCropName().capitalize(), time))
+                # month5.append((price, change, i.getCropName().split('/')[0].capitalize(), time))
             elif k == 5:
-                month6.append((price, change, str(i).capitalize(), time))
+                month6.append((price, change, i.getCropName().capitalize(), time))
+                # month6.append((price, change, i.getCropName().split('/')[0].capitalize(), time))
             k += 1
     
     # Sort each month's data and handle empty lists
