@@ -144,7 +144,7 @@ class Commodity:
 
     def getCropName(self):
         return self.name
-# client = initialize_appwrite_client()
+
 
 # Load commodities at startup
 try:
@@ -872,7 +872,8 @@ def login():
 
 @app.route('/oauth/callback')
 def oauth_callback():
-    return render_template('index1.html')
+    session['email'] = "OAuth_User"  # Optional placeholder, if needed
+    return redirect(url_for('index'))
 
 @app.route('/logout')
 def logout():
