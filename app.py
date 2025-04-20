@@ -26,30 +26,31 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 cors = CORS(app, resources={r"/ticker": {"origins": "*"}})  # Allow all origins or specify domains
 
 commodity_dict = {
-    "arhar": "680220b7000b19e5470b",
-    "bajra": "680220b30004dc8b4590",
-    "barley": "680220ae003249df2282",
-    "copra": "680220a9002d1ffda549",
-    "cotton": "680220a5000a00ef9a0d",
-    "sesamum": "68022042003e073211e4",
-    "gram": "6802208a00037a0a5bfa",
-    "groundnut": "6802208400158728a327",
-    "jowar": "6802207e002276203831",
-    "maize": "680220730024756d13e8",
-    "masoor": "6802206d003937daa9fa",
-    "moong": "680220690003e0ea2c25",
-    "niger": "680220630031664b31be",
-    "paddy": "6802205e0030ada1a89f",
-    "ragi": "6802205900318f8790ff",
-    "rape": "6802205400120d77255a",
-    "jute": "68022078001ce6b8f704",
-    "safflower": "680220480016b66a0099",
-    "soyabean": "6802203c003766174adf",
-    "sugarcane": "68022024003e41ed1eaa",
-    "sunflower": "68021ff80023d86bdb9a",
-    "urad": "68021feb0013dc8f5220",
-    "wheat": "68021fdb00200b466d08"
+    "arhar": app.config["ARHAR_ID"],
+    "bajra": app.config["BAJRA_ID"],
+    "barley": app.config["BARLEY_ID"],
+    "copra": app.config["COPRA_ID"],
+    "cotton": app.config["COTTON_ID"],
+    "sesamum": app.config["SESAMUM_ID"],
+    "gram": app.config["GRAM_ID"],
+    "groundnut": app.config["GROUNDNUT_ID"],
+    "jowar": app.config["JOWAR_ID"],
+    "maize": app.config["MAIZE_ID"],
+    "masoor": app.config["MASOOR_ID"],
+    "moong": app.config["MOONG_ID"],
+    "niger": app.config["NIGER_ID"],
+    "paddy": app.config["PADDY_ID"],
+    "ragi": app.config["RAGI_ID"],
+    "rape": app.config["RAPE_ID"],
+    "jute": app.config["JUTE_ID"],
+    "safflower": app.config["SAFFLOWER_ID"],
+    "soyabean": app.config["SOYABEAN_ID"],
+    "sugarcane": app.config["SUGARCANE_ID"],
+    "sunflower": app.config["SUNFLOWER_ID"],
+    "urad": app.config["URAD_ID"],
+    "wheat": app.config["WHEAT_ID"]
 }
+
 
 annual_rainfall = [29, 21, 37.5, 30.7, 52.6, 150, 299, 251.7, 179.2, 70.5, 39.8, 10.9]
 base = {
