@@ -76,8 +76,8 @@ Agro Genius follows a modular architecture designed for scalability and maintain
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/yourusername/agro-genius.git
-cd agro-genius
+git clone https://github.com/athrocks/Farming-Made-Easy.git
+cd Farming-Made-Easy
 ```
 
 ### Step 2: Set up a virtual environment
