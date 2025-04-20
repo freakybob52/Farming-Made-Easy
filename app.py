@@ -1,11 +1,10 @@
-from flask import Flask, render_template, request, jsonify, redirect, session
+from flask import Flask, render_template, request, jsonify, redirect, session,url_for
 from flask_cors import CORS, cross_origin
 import numpy as np
 import pandas as pd
 from datetime import datetime
 import crops
 import pickle
-import calendar
 import random
 import io
 import os
@@ -17,10 +16,6 @@ from appwrite.client import Client
 from appwrite.services.account import Account
 from appwrite.exception import AppwriteException
 from appwrite.services.storage import Storage
-
-# Add the production check helper here
-def is_production():
-    return os.environ.get('VERCEL_ENV') == 'production' or os.environ.get('PRODUCTION') == 'true'
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -832,6 +827,22 @@ def signup():
     return render_template('signup.html')
 
 
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     if request.method == 'POST':
+#         email = request.form['email']
+#         password = request.form['password']
+#         try:
+#             session_response = account.create_email_password_session(email, password)
+#             session['email'] = email
+#             # return f"Logged in as {email} <br><a href='/logout'>Logout</a>"
+#             return render_template('index1.html', email=email)
+
+#         except AppwriteException as e:
+#             return f"Login Error: {e.message}"
+#     return render_template('login.html')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -840,13 +851,27 @@ def login():
         try:
             session_response = account.create_email_password_session(email, password)
             session['email'] = email
-            # return f"Logged in as {email} <br><a href='/logout'>Logout</a>"
             return render_template('index1.html', email=email)
-
         except AppwriteException as e:
             return f"Login Error: {e.message}"
-    return render_template('login.html')
 
+    # OAuth2 URL generation
+    success_uri = url_for('oauth_callback', _external=True)  # e.g., http://localhost:5000/oauth/callback
+    failure_uri = url_for('login', _external=True)
+
+    oauth_url = (
+        f"https://cloud.appwrite.io/v1/account/sessions/oauth2/google"
+        f"?project={app.config['APPWRITE_PROJECT_ID']}"
+        f"&success={success_uri}"
+        f"&failure={failure_uri}"
+    )
+
+    return render_template('login.html', google_oauth_url=oauth_url)
+
+
+@app.route('/oauth/callback')
+def oauth_callback():
+    return render_template('index1.html')
 
 @app.route('/logout')
 def logout():
